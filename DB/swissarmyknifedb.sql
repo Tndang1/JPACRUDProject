@@ -16,13 +16,19 @@ CREATE SCHEMA IF NOT EXISTS `swissarmyknifedb` DEFAULT CHARACTER SET utf8 ;
 USE `swissarmyknifedb` ;
 
 -- -----------------------------------------------------
--- Table `swiss_army_knife`
+-- Table `tool`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `swiss_army_knife` ;
+DROP TABLE IF EXISTS `tool` ;
 
-CREATE TABLE IF NOT EXISTS `swiss_army_knife` (
+CREATE TABLE IF NOT EXISTS `tool` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NOT NULL,
+  `in_production` CHAR(1) NULL,
+  `price` DECIMAL(5,2) NULL,
+  `size` TINYINT(3) NULL,
+  `scale_tools` VARCHAR(45) NULL,
+  `main_tools` VARCHAR(100) NULL,
+  `back_tools` VARCHAR(100) NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
@@ -38,11 +44,14 @@ SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
 -- -----------------------------------------------------
--- Data for table `swiss_army_knife`
+-- Data for table `tool`
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `swissarmyknifedb`;
-INSERT INTO `swiss_army_knife` (`id`, `name`) VALUES (1, 'Classic');
+INSERT INTO `tool` (`id`, `name`, `in_production`, `price`, `size`, `scale_tools`, `main_tools`, `back_tools`) VALUES (1, 'Classic', 't', 16.99, 58, 'toothpick, tweezers', 'Knife, nail file, scissors', NULL);
+INSERT INTO `tool` (`id`, `name`, `in_production`, `price`, `size`, `scale_tools`, `main_tools`, `back_tools`) VALUES (2, 'Spartan', 't', 24.00, 91, 'toothpick, tweezers', 'large knife, small knife, bottle opener/screwdriver, can opener/screwdriver', 'corkscrew, awl');
+INSERT INTO `tool` (`id`, `name`, `in_production`, `price`, `size`, `scale_tools`, `main_tools`, `back_tools`) VALUES (3, 'Trekker', 't', 46.00, 111, 'toothpick, tweezers', 'knife, saw, bottle opener, can opener', 'phillips screwdriver, awl');
+INSERT INTO `tool` (`id`, `name`, `in_production`, `price`, `size`, `scale_tools`, `main_tools`, `back_tools`) VALUES (4, 'Compact', 't', 44.99, 91, 'toothpick, tweezers, pen, safety pin', 'knife, scissors, bottle/can opener', 'corkscrew, mini screwdriver, hook');
 
 COMMIT;
 

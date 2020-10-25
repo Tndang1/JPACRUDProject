@@ -12,13 +12,12 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class Swiss_Army_KnifeTest {
+class ToolTest {
 	private static EntityManagerFactory emf;
 	private EntityManager em;
-
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
-		emf = Persistence.createEntityManagerFactory("SAK");
+		emf = Persistence.createEntityManagerFactory("ToolPU");
 	}
 
 	@AfterAll
@@ -37,10 +36,10 @@ class Swiss_Army_KnifeTest {
 	}
 
 	@Test
-	void find_returns_correct_entity() {
-		Swiss_Army_Knife sak = em.find(Swiss_Army_Knife.class, 1);
-		assertEquals(1, sak.getId());
-		assertEquals("Classic", sak.getName());
+	void test() {
+		Tool tool = em.find(Tool.class, 1);
+		assertNotNull(tool);
+		assertEquals("Classic", tool.getName());
 	}
 
 }
