@@ -21,7 +21,7 @@
 				<tr>
 				<td>
 				<form action="createToolForm.do">
-				<button type="submit">Add a Tool</button>
+					<button type="submit">Add a Tool</button>
 				</form>
 				</td>
 				</tr>

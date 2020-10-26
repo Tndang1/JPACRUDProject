@@ -39,7 +39,14 @@ class ToolTest {
 	void test() {
 		Tool tool = em.find(Tool.class, 1);
 		assertNotNull(tool);
-		assertEquals("Classic", tool.getName());
+		assertEquals(1, tool.getId());
+		assertEquals("Dewalt", tool.getBrand());
+		assertEquals("1/4 Impact Driver 20v XR", tool.getDescription());
+		assertEquals("battery", tool.getPowerType());
+		assertEquals(2014, tool.getYearBought());
+		assertEquals("Morgan House", tool.getLocation());
+		assertEquals("Worn", tool.getCondition());
+		assertEquals(139.00, tool.getCost());
 	}
 
 }
