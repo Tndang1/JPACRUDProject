@@ -27,7 +27,7 @@ public class ToolController {
 	public String listAll(Model model) {
 		List<Tool> tools = dao.listAllTools();
 		model.addAttribute("tools", tools);
-		return "results";
+		return "index";
 	}
 	
 	@RequestMapping (path="createToolForm.do")
@@ -110,7 +110,11 @@ public class ToolController {
 		addTool.setCost(cost);
 		addTool.setLocation(location);
 		addTool.setPowerType(powerType);
-		addTool.setYearBought(yearBought);
+		try {
+			addTool.setYearBought(yearBought);
+		} catch (Exception e) {
+			addTool.setYearBought(0);
+		}
 		dao.createTool(addTool);
 		model.addAttribute("tool", addTool);
 		return "singleResult";

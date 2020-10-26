@@ -36,7 +36,7 @@ class ToolTest {
 	}
 
 	@Test
-	void test() {
+	void test_tool_mapping() {
 		Tool tool = em.find(Tool.class, 1);
 		assertNotNull(tool);
 		assertEquals(1, tool.getId());
@@ -48,5 +48,5 @@ class ToolTest {
 		assertEquals("Worn", tool.getCondition());
 		assertEquals(139.00, tool.getCost());
 	}
-
+	
 }

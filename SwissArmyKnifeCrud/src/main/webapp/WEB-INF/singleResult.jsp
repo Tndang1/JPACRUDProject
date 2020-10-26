@@ -13,6 +13,9 @@
 <title>Tool Created</title>
 </head>
 <body>
-	<p>${tool.brand}</p>
+<form action="getTools.do">
+<button type="submit">Return home.</button>
+</form>
+	<p>Added ${tool.brand} ${tool.description} to data.</p>
 </body>
 </html>

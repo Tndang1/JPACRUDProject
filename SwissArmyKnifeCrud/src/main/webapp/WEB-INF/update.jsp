@@ -13,6 +13,9 @@
 <title>Update Tool</title>
 </head>
 <body>
+<form action="getTools.do">
+<button type="submit">Return home.</button>
+</form>
 	<div class="container-fluid">
 		<table class="table table-striped table-hover">
 			<thead class="thead thead-dark">Tools
@@ -40,7 +43,7 @@
 						<input type="hidden" name="id" value="${tool.id}">
 						<td>Year of Purchase:</td>
 						<td>${tool.yearBought}</td>
-						<td><input type="text" name="yearBought" /></td>
+						<td><input type="number" name="yearBought" /></td>
 						<td><button type="submit">Submit</button></td>
 					</form>
 			</tr>
@@ -76,7 +79,7 @@
 						<input type="hidden" name="id" value="${tool.id}">
 						<td>Replacement Cost:</td>
 						<td>${tool.cost}</td>
-						<td><input type="text" name="cost" /></td>
+						<td><input type="number" step="0.1" name="cost" /></td>
 						<td><button type="submit">Submit</button></td>
 					</form>
 			</tr>

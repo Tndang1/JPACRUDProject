@@ -14,12 +14,15 @@
 </head>
 <body>
 <c:choose>
-	<c:when test="deleted">
+	<c:when test="${deleted}">
 	<p>${tool.brand} ${tool.description} has been removed.</p>
 	</c:when>
 	<c:otherwise>
 	Removal of ${tool.brand} ${tool.description} FAILED.
 	</c:otherwise>
-</c:choose>]
+</c:choose>
+<form action="getTools.do">
+<button type="submit">Return home.</button>
+</form>
 </body>
 </html>
