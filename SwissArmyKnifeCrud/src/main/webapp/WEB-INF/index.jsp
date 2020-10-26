@@ -9,22 +9,20 @@
 	href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
 	integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
 	crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
 <meta charset="UTF-8">
 <title>Listed Tools</title>
 </head>
 <body>
 	<div class="container-fluid">
+<h2>Home Page</h2>
 		<table class="table table-striped table-hover">
-			<thead class="thead thead-dark">Tools
-			</thead>
-			<tbody>
-				<tr>
-				<td>
+			<thead class="thead thead-dark"><h3>Tool List</h3>
 				<form action="createToolForm.do">
 				<button type="submit">Add a Tool</button>
 				</form>
-				</td>
-				</tr>
+			</thead>
+			<tbody>
 				<c:forEach items="${tools}" var="tool">
 					<tr>
 						<td>${tool.brand}</td>

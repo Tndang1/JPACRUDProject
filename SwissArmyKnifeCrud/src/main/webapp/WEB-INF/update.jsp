@@ -9,14 +9,16 @@
 	href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
 	integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
 	crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
 <meta charset="UTF-8">
 <title>Update Tool</title>
 </head>
 <body>
+	<div class="container-fluid">
+<h3>Update Tool</h3>
 <form action="getTools.do">
 <button type="submit">Return home.</button>
 </form>
-	<div class="container-fluid">
 		<table class="table table-striped table-hover">
 			<thead class="thead thead-dark">Tools
 			</thead>
