@@ -11,15 +11,23 @@
 	crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="style.css">
 <meta charset="UTF-8">
-<title>Tool Created</title>
+<title>Tool Info</title>
 </head>
 <body>
 	<div class="container-fluid">
-<h2>Tool Added Check.</h2>
+<h2>Tool Details</h2>
 <form action="getTools.do">
 <button type="submit">Return home.</button>
 </form>
-	<p>Added ${tool.brand} ${tool.description} to data.</p>
+	<ul>
+		<li>Brand: ${tool.brand}</li>
+		<li>Description: ${tool.description}</li>
+		<li>Purchase year: ${tool.yearBought}</li>
+		<li>Location: ${tool.location}</li>
+		<li>Condition: ${tool.condition}</li>
+		<li>Power Type: ${tool.powerType}</li>
+		<li>Replacement Cost: ${tool.cost}</li>
+	</ul>
 	</div>
 </body>
 </html>

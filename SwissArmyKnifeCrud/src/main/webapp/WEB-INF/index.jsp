@@ -23,10 +23,16 @@
 				</form>
 			</thead>
 			<tbody>
+			<tr>
+				<td>Brand</td>
+				<td>Description</td>
+				<td>Location</td>
+				<td colspan="2">Selection</td>
+				</tr>
 				<c:forEach items="${tools}" var="tool">
 					<tr>
 						<td>${tool.brand}</td>
-						<td>${tool.description}</td>
+						<td><a href="singleTool.do?id=${tool.id}">${tool.description}</a></td>
 						<td>${tool.location}</td>
 						<td>
 							<form action="updateToolForm.do" method="GET">

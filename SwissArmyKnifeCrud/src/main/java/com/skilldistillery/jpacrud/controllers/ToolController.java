@@ -30,6 +30,13 @@ public class ToolController {
 		return "index";
 	}
 	
+	@RequestMapping (path="singleTool.do")
+	public String listOne(Model model, int id) {
+		Tool tool = dao.findToolById(id);
+		model.addAttribute("tool", tool);
+		return "singleResult";
+	}
+	
 	@RequestMapping (path="createToolForm.do")
 	public String addTool() {
 		return "create";

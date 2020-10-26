@@ -27,7 +27,7 @@
 				<li class="list-group-item">Location:<input type="text" name="location" /></li>
 				<li class="list-group-item">Condition:<input type="text" name="condition" /></li>
 				<li class="list-group-item">Power Type:<input type="text" name="powerType" /></li>
-				<li class="list-group-item">Replacement Cost:<input type="number" step="0.1" name="cost" /></li>
+				<li class="list-group-item">Replacement Cost:<input type="number" step="0.01" name="cost" /></li>
 				<li><button type="submit">Submit</button></li>
 			</ul>
 		</form>

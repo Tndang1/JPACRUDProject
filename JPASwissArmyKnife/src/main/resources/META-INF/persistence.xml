@@ -9,7 +9,7 @@
     </provider>
     
     <!--  List Entities Here -->
-    <class>com.skilldistillery.jpavideostore.entities.Tool</class>
+    <class>com.skilldistillery.jpacrud.entities.Tool</class>
 
     <properties>
     <!-- timezone was MST first -->

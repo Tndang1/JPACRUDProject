@@ -2,9 +2,17 @@ package com.skilldistillery.jpacrud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 @SpringBootApplication
-public class SwissArmyKnifeCrudApplication {
+@EntityScan("com.skilldistillery.jpacrud")
+public class SwissArmyKnifeCrudApplication extends SpringBootServletInitializer {
+	@Override
+	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+		return application.sources(SwissArmyKnifeCrudApplication.class);
+	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(SwissArmyKnifeCrudApplication.class, args);

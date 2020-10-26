@@ -81,7 +81,7 @@
 						<input type="hidden" name="id" value="${tool.id}">
 						<td>Replacement Cost:</td>
 						<td>${tool.cost}</td>
-						<td><input type="number" step="0.1" name="cost" /></td>
+						<td><input type="number" step="0.01" name="cost" /></td>
 						<td><button type="submit">Submit</button></td>
 					</form>
 			</tr>
